@@ -12,6 +12,13 @@
 /* ألوان هادئة ومختلفة للأقسام، مع بقاء حالات الإنجاز والاستعجال واضحة */
 .cat{background:var(--cat-bg,#f5f9fd);border-color:#cfdce5}.cat-title{background:#ffffff90;border-radius:9px;padding:8px}.cat .item:not(.done):not(.urgent-status){background:#ffffffd9}.cat .item.done{background:#d1f4de}.cat .item.urgent-status{background:#ffe1e0}
 @media(max-width:600px){.document-quick-add{display:grid;grid-template-columns:1fr 1fr}.document-quick-add button{font-size:12px}.document-quick-add button:last-child{grid-column:1/-1}}
+
+/* الخط العربي المطلوب: يظهر على الأجهزة التي يتوفر فيها Traditional Arabic. */
+:root,html,body,button,input,select,textarea,option,a,table,th,td {
+  font-family: "Traditional Arabic", "Arabic Typesetting", "Noto Naskh Arabic", "Times New Roman", serif !important;
+}
+body { line-height: 1.65; }
+button,input,select,textarea { line-height: 1.45; }
 </style></head><body><div class="shell"><header class="hero"><div><h1>✈️ منظّم السفر الذكي</h1><p>حجوزاتك، تجهيزاتك، ومواعيدك المهمة في مكان واحد</p></div><div class="date" id="today"></div></header><nav class="nav"><a href="#bookings">🗓️ الحجوزات</a><a href="#urgent">🚨 عاجل</a><a href="#categories">🧳 المتطلبات</a></nav>
 <section class="panel" id="bookings"><div class="heading"><h2>🗓️ حجوزات السفر</h2><button class="btn alt small" onclick="toggleFileManage()" id="manageFilesButton">⚙️ إدارة الملفات</button></div>
 <div class="document-quick-add" aria-label="إضافة حجوزات جديدة"><button type="button" class="quick-add-flight" onclick="quickAddDocument('flight')">＋ إضافة رحلة طيران</button><button type="button" class="quick-add-hotel" onclick="quickAddDocument('hotel')">＋ إضافة فندق</button><button type="button" class="quick-add-car" onclick="quickAddDocument('car')">＋ إضافة سيارة</button></div><div id="documentButtons" class="document-buttons"></div>
